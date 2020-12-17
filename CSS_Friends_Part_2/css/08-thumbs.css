@@ -1,2 +1,36 @@
 /* PHASE 2: Thumbs */
+.section-thumb {
+    margin-top: 15px;
+}
 
+.thumb {
+    position: relative;
+}
+
+.thumb:hover::before{
+    content: attr(title);
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+}
+
+.thumb:after {
+    content: "";
+}   
+
+.section-thumb img {
+    width: 56px;
+    height: auto;
+    /* float: left; */
+    margin: 4px;
+    /* position: relative; */
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.section-thumb li {
+    /* float: left; */
+    display: inline-block;
+    width: 50px;
+}
