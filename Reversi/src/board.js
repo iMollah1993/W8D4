@@ -9,6 +9,11 @@ if (typeof window === 'undefined'){
  * and two white pieces at [3, 3] and [4, 4]
  */
 function _makeGrid () {
+  this = Array.from({length:8}, () => Array.from({length:8}));
+  this[3][4] = new Piece('black');
+  this[4][3] = new Piece('black');
+  this[3][3] = new Piece('white');
+  this[4][4] = new Piece('white');
 }
 
 /**
