@@ -158,6 +158,23 @@ Board.prototype.validMove = function (pos, color) {
  * Throws an error if the position represents an invalid move.
  */
 Board.prototype.placePiece = function (pos, color) {
+  let row = pos[0]
+  let col = pos[1]
+  
+  // place a new piece
+  if (this.validMove(pos, color)) {
+    this.grid[row][col] = new Piece(color);
+
+    // getting all flippable positions and flipping them
+    for (let i = 0; i < Board.DIRS.length; i++) {
+      this._positionsToFlip(pos, color, Board.DIRS[i]).forEach(flipPos => {
+        let piece = this.grid[flipPos[0]][flipPos[1]];
+        piece.color = color;
+      });
+    }
+  } else {
+    throw new Error("Invalid move!")
+  };
 };
 
 /**
@@ -165,6 +182,7 @@ Board.prototype.placePiece = function (pos, color) {
  * the Board for a given color.
  */
 Board.prototype.validMoves = function (color) {
+  
 };
 
 /**
