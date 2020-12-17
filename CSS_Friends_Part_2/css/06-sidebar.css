@@ -1,8 +1,29 @@
 /* PHASE 0: Sidebar */
+.content-sidebar{
+    font-family: sans-serif;
+}
 .profile-picture {
-    margin-top: -65px;
+    margin-top: -125px;
     position: relative;
     /* z-index: 1; */
     border: 1px solid black;
     border-radius: 5px;
+}
+
+.profile-info p {
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+    font-size: 14px;
+}
+
+.profile-nav li {
+    padding: 5px;
+    border-bottom: 1px solid lightgray;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+.profile-nav li:hover{
+    background-color: lightgray;
 }
